@@ -631,7 +631,7 @@ code{background:var(--stone);border-radius:4px;padding:1px 6px;font-size:12px;co
       <div class="sms-setup">
         <div class="sms-setup-title">📱 Enable Real SMS OTP — Semaphore (Free Philippine SMS)</div>
         <div class="sms-setup-sub">Set up free SMS OTP for homeowner verification. Semaphore offers 10 free credits on signup — perfect for a village HOA. Sign up at <a href="https://semaphore.co" target="_blank" style="color:var(--brand);font-weight:600;">semaphore.co</a>, get your API key from the dashboard, and enter it below.</div>
-        <div class="form-group"><label class="form-label">Semaphore API Key</label><input class="form-control" id="smsKey" placeholder="Paste your Semaphore API key here"></div>
+        <div class="form-group"><label class="form-label">e5bfc814384ee1c125002848cf7db9e2</label><input class="form-control" id="smsKey" placeholder="e5bfc814384ee1c125002848cf7db9e2"></div>
         <div class="form-group"><label class="form-label">Sender Name <span style="font-weight:400;color:var(--ink-muted)">(max 11 chars, optional)</span></label><input class="form-control" id="smsSender" placeholder="SorrentoHOA" maxlength="11"></div>
         <button class="sec-btn sec-btn-brand" style="height:44px;" onclick="saveSMSConfig()">💾 Save SMS Config</button>
         <div class="config-saved-badge" id="smsSavedBadge">✅ SMS configured — OTPs will be sent via Semaphore</div>
@@ -858,7 +858,7 @@ async function loadSMSConfig(){
 async function saveSMSConfig(){
   const key=document.getElementById('smsKey').value.trim();
   const sender=document.getElementById('smsSender').value.trim()||'SorrentoHOA';
-  if(!key){toast('Please enter your Semaphore API key.','err');return;}
+  if(!key){toast('e5bfc814384ee1c125002848cf7db9e2','err');return;}
   smsConfig={key,sender};
   await PUT('config',{k:'sms',key,sender});
   document.getElementById('smsSavedBadge').style.display='block';
